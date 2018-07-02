@@ -17,20 +17,29 @@
 
  
 
-```<FIRequest ver="1.0" timestamp="2018-06-09T09:58:50.505Z" txnid="c5a1450c-d08a-45b4-a475-0468bd10e380">
-	<ConsentID>c4a1450c-d08a-45b4-a475-0468bd10e380</ConsentID>
-		<DataConsumer id="123456@finvu.in" type="AA" callbackURL="localhost:9090/AA/Test"></DataConsumer>
-	<RequestFIParams>
-		<KeyMaterials>
-			<KeyMaterial startTime="2018-06-01T09:58:50.505Z">
-				<SessionID>string</SessionID>
-				<DHPublicKey expiry="2019-06-01T09:58:50.505Z">
-					<Parameters>Param 1</Parameters>
-					<KeyValue>W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=</KeyValue>
-				</DHPublicKey>
-				<Nonce>12345</Nonce>
-				<Signature> Signature Value</Signature>
-			</KeyMaterial>
-		</KeyMaterials>
-	</RequestFIParams>
-</FIRequest>```
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<AccDiscoveryRequest xmlns="https://standards.rebit.org.in/aa" ver="1.0" timestamp="2018-05-22T17:30:15.239Z" txnid="8399263c-4a15-11e8-bcd1-0277a9fbfedc">
+<Identifiers><Identifier category="STRONG" type="MOBILE" value="7030608902"></Identifier></Identifiers>
+<FIPDetails name="string" id="string">
+<FITypes>
+<FIType1 name="DEPOSIT" value="string"></FIType1>
+<FIType name="DEPOSIT" value="string"></FIType>
+</FITypes>
+</FIPDetails>
+<Meta type="PERSON" value="string">
+<DeviceInfo>
+<Tag name="MOBILE" value="string"></Tag>
+<Tag1 name="GEOCODE" value="string"></Tag1>
+<Tag3 name="LOCATION" value="string"></Tag3>
+<Tag4 name="IP" value="string"></Tag4>
+<Tag5 name="TYPE" value="string"></Tag5>
+<Tag6 name="ID" value="string"></Tag6>
+<Tag7 name="OS" value="string"></Tag7>
+<Tag8 name="APP" value="string"></Tag8>
+<Tag9 name="CAPABILITY" value="string"></Tag9>
+<Tag10 name="TELECOM" value="string"></Tag10>
+</DeviceInfo>
+</Meta>
+</AccDiscoveryRequest>
+```
