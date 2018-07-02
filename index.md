@@ -13,8 +13,8 @@
   | URL      | _http://<IP>:<Port>/ConnectHub/V1/Accounts/discover_ |
   | Key      | ```x-access-token```      |
   | Value | ```Please email us on info@cookiejar.co.in for value of key``` |
-    ***Request Body***
-    ```<FIRequest ver="1.0" timestamp="2018-06-09T09:58:50.505Z" txnid="c5a1450c-d08a-45b4-a475-0468bd10e380">
+    **Request Body**
+    `<FIRequest ver="1.0" timestamp="2018-06-09T09:58:50.505Z" txnid="c5a1450c-d08a-45b4-a475-0468bd10e380">
 	<ConsentID>c4a1450c-d08a-45b4-a475-0468bd10e380</ConsentID>
 		<DataConsumer id="123456@finvu.in" type="AA" callbackURL="localhost:9090/AA/Test"></DataConsumer>
 	<RequestFIParams>
@@ -30,4 +30,4 @@
 			</KeyMaterial>
 		</KeyMaterials>
 	</RequestFIParams>
-</FIRequest>``` 
+</FIRequest>` 
