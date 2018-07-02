@@ -10,7 +10,7 @@
 	
   | Tables        | Are           |
   | ------------- |:-------------:|
-  | URL      | _http://<<IP>>:<<Port>>/ConnectHub/V1/Accounts/discover_ |
+  | URL      | _http://<<0.0.0.0>>:<<0000>>/ConnectHub/V1/Accounts/discover_ |
   | Key      | ```x-access-token```      |
   | Value | ```Please email us on info@cookiejar.co.in for value of key``` |
     
