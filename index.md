@@ -30,8 +30,8 @@
 </FIRequest>
   ```
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| URL      | _http://<IP>:<Port>/ConnectHub/V1/Accounts/discover_ | $1600 |
-| Key      | x-access-token      |   $12 |
-| Value | `eyJraWQiOiJjb29raWVqYXIiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJjb29raWVqYXIiLCJleHAiOjE1NTk2NDE0MjIsImp0aSI6Im5tbWpnd3VGb21acjVWWm1NMjRhaHciLCJpYXQiOjE1MjgxMDU0MjIsIm5iZiI6MTUyODEwNTM2Miwic3ViIjoic29tZUFBIiwiZ3JvdXBzIjpbImFnZ3JlZ2F0b3IiXX0.lJsU7hdZo9NKLLz9PVa3TJYy-Xi-ZX94_IHnJd-XGr5Skc8iHXBo7FW1L65rA7cOb9Spmira9vulP_a_qsik2XktTWlBXoWcRnLl8LaPLTsUH8cHqrP57CXCdhR3jQAjvu1913r-82xbQGYbc_S8aET2p529jnsBQ3LCR8hhGSvPPF5lo7N3EZNxQOLK3YuKNhrkcUICD7OZcIHSsXhqJAsYnonsnj4nBImsnyz9MA3xYxW3vjMQI6XmgiFIjYRh9ddqfAEcIyYAeQUQ8U9HmBpEUboMwRbCmbGfbEeu6F2SpukhwoBYzHLFHUfOq8wVBsY3essYtVnlv8cGqsJsww`      |    $1 |
+| Tables        | Are           |
+| ------------- |:-------------:|
+| URL      | _http://<IP>:<Port>/ConnectHub/V1/Accounts/discover_ |
+| Key      | x-access-token      |
+| Value | `eyJraWQiOiJjb29raWVqYXIiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJjb29raWVqYXIiLCJleHAiOjE1NTk2NDE0MjIsImp0aSI6Im5tbWpnd3VGb21acjVWWm1NMjRhaHciLCJpYXQiOjE1MjgxMDU0MjIsIm5iZiI6MTUyODEwNTM2Miwic3ViIjoic29tZUFBIiwiZ3JvdXBzIjpbImFnZ3JlZ2F0b3IiXX0.lJsU7hdZo9NKLLz9PVa3TJYy-Xi-ZX94_IHnJd-XGr5Skc8iHXBo7FW1L65rA7cOb9Spmira9vulP_a_qsik2XktTWlBXoWcRnLl8LaPLTsUH8cHqrP57CXCdhR3jQAjvu1913r-82xbQGYbc_S8aET2p529jnsBQ3LCR8hhGSvPPF5lo7N3EZNxQOLK3YuKNhrkcUICD7OZcIHSsXhqJAsYnonsnj4nBImsnyz9MA3xYxW3vjMQI6XmgiFIjYRh9ddqfAEcIyYAeQUQ8U9HmBpEUboMwRbCmbGfbEeu6F2SpukhwoBYzHLFHUfOq8wVBsY3essYtVnlv8cGqsJsww` |
