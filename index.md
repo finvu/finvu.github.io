@@ -120,7 +120,7 @@ Response Expected:
   | Key      | ```x-access-token```      |
   | Value | ```Please email us on info@cookiejar.co.in for value of key``` |
   
-  e.g. URL : http://215.216.217.72:9090/ConnectHub/V1/Accounts/RefSBI004
+  e.g. URL : http://192.168.0.1:9090/ConnectHub/V1/Accounts/RefSBI004
   
   Request Body
 
