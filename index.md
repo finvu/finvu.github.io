@@ -4,7 +4,69 @@
 #### **Software prerequisite**
 - Postman    _(URL : https://www.getpostman.com/)_
 
-#### **API to enter your own sample data**
+### **API to enter your own sample data**
+ - **Adding User Account API**
+	
+  |          |             |
+  | ------------- |:-------------:|
+  | URL      | _http://<<0.0.0.0>>:<<0000>>/Accounts/add_ |
+
+  Request Body
+
+
+```
+<UserAccountInfo>
+	<UserAccount accountRefNo="RefSBI002" accountNo="SBI222222222" accountTypeEnum="SAVINGS">
+		<Identifiers pan="AFF34964FFF" mobile="7000000000" email="backend@gmail.com" aadhar="3408030493453"></Identifiers>	
+	</UserAccount>
+</UserAccountInfo>
+```
+Response Expected: 
+```
+UserAccountInfo [userAccounts=[UserAccount [accountRefNo=RefSBI002, accountNo=SBI222222222, accountTypeEnum=SAVINGS, identifiers=Identifiers [pan=AFF34964FFF, mobile=7000000000, email=backend@gmail.com, aadhar=3408030493453]]]]
+  ```
+
+
+ - **Adding User Account Transaction data API**
+	
+  |          |             |
+  | ------------- |:-------------:|
+  | URL      | _http://<<0.0.0.0>>:<<0000>>/Accounts/Transaction/add_ |
+
+  Request Body
+
+
+```
+<UserAccountTrans>
+	<UserAccount> 
+		<accountRefNo>RefSBI001</accountRefNo> 
+		<accountNo>SBI111111111111</accountNo> 
+		<accountTypeEnum>SAVINGS</accountTypeEnum>
+		<transactionRefNo>txn0001</transactionRefNo> 
+		<accountBalance>10000.00</accountBalance> 
+		<amount>300.00</amount> 
+		<amountEntry>CR</amountEntry> 
+		<transationNarration>salary</transationNarration>
+	</UserAccount>
+	<UserAccount> 
+		<accountRefNo>RefSBI002</accountRefNo> 
+		<accountNo>SBI222222222</accountNo> 
+		<accountTypeEnum>SAVINGS</accountTypeEnum>
+		<transactionRefNo>txn0001</transactionRefNo> 
+		<accountBalance>100.00</accountBalance> 
+		<amount>300.00</amount> 
+		<amountEntry>CR</amountEntry> 
+		<transationNarration>salary</transationNarration>
+	</UserAccount>
+</UserAccountTrans>
+```
+Response Expected: 
+```
+UserAccountTrans [userAccounts=[UserAccount [accountRefNo=RefSBI001, accountNo=SBI111111111111, accountTypeEnum=SAVINGS, transactionRefNo=txn0001, accountBalance=10000.0, amount=300.0, amountEntry=CR, transationNarration=salary], UserAccount [accountRefNo=RefSBI002, accountNo=SBI222222222, accountTypeEnum=SAVINGS, transactionRefNo=txn0001, accountBalance=100.0, amount=300.0, amountEntry=CR, transationNarration=salary]]]
+```
+  
+### **Financial Information Provider API**
+
 
   - **Account Discover API**
 	
