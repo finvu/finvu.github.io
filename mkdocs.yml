@@ -1,4 +1,13 @@
+site_name: Finvu API Docs
+# Copyright
+copyright: 'Copyright &copy; 2018 - 2019 Cookiejar Technologies Pvt Ltd.'
+
+theme: 
+ name: 'material'
+ logo: 'images/finvu_logo.png'
+
+# Page tree
 pages:
-- index.md
-- ConnectHub.md
-- README.md
+  - Overview: index.md
+  - FIP API (Simulator): fip_simulator.md
+  - FIP Data API: fip_data_api.md

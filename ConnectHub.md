@@ -1,3 +1,0 @@
----
----
-# Finvu ConnectHub Simulator
