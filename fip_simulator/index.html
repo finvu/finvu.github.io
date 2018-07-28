@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.2">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.2">
     
     
       
@@ -207,15 +207,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" title="Project layout" class="md-nav__link">
-    Project layout
+  <a href="#request-headers" title="Request headers" class="md-nav__link">
+    Request headers
   </a>
   
 </li>
@@ -224,6 +217,61 @@
   <a href="#api-request" title="API Request" class="md-nav__link">
     API Request
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-discover" title="Account Discover" class="md-nav__link">
+    Account Discover
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-linking" title="Account Linking" class="md-nav__link">
+    Account Linking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-confirm-token" title="Account Confirm Token" class="md-nav__link">
+    Account Confirm Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-request" title="FI request" class="md-nav__link">
+    FI request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-fetch" title="FI Fetch" class="md-nav__link">
+    FI Fetch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification" title="Notification" class="md-nav__link">
+    Notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heartbeat" title="Heartbeat" class="md-nav__link">
+    Heartbeat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -271,15 +319,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" title="Project layout" class="md-nav__link">
-    Project layout
+  <a href="#request-headers" title="Request headers" class="md-nav__link">
+    Request headers
   </a>
   
 </li>
@@ -288,6 +329,61 @@
   <a href="#api-request" title="API Request" class="md-nav__link">
     API Request
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-discover" title="Account Discover" class="md-nav__link">
+    Account Discover
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-linking" title="Account Linking" class="md-nav__link">
+    Account Linking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-confirm-token" title="Account Confirm Token" class="md-nav__link">
+    Account Confirm Token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-request" title="FI request" class="md-nav__link">
+    FI request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fi-fetch" title="FI Fetch" class="md-nav__link">
+    FI Fetch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification" title="Notification" class="md-nav__link">
+    Notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heartbeat" title="Heartbeat" class="md-nav__link">
+    Heartbeat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -309,21 +405,256 @@
                 
                 
                 <h1 id="fip-api-simulator">FIP API (Simulator)</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
+<p>This is a simulator implementation of the FIP API and can be used for testing the Account Aggregator flows as part of the ecosystem. </p>
+<h2 id="request-headers">Request headers</h2>
+<p>Below <code>http</code> headers need to be set as part of each request</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content-Type</code></td>
+<td align="center"><code>application/xml</code></td>
+</tr>
+<tr>
+<td><code>aa_api_key</code></td>
+<td align="center"><code>Please email us on info@cookiejar.co.in for obtaining the key</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="api-request">API Request</h2>
+<p>The API URL to be used is <code>&lt;Root API Endpoint&gt;/&lt;FIP API&gt;</code> as per ReBIT FIP API Specs.</p>
+<h3 id="account-discover">Account Discover</h3>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/discover</code></p>
+<p>Request Body</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;AccDiscoveryRequest xmlns=&quot;https://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-22T17:30:15.239Z&quot; txnid=&quot;8399263c-4a15-11e8-bcd1-0277a9fbfedc&quot;&gt;
+&lt;Identifiers&gt;&lt;Identifier category=&quot;STRONG&quot; type=&quot;MOBILE&quot; value=&quot;7030608902&quot;&gt;&lt;/Identifier&gt;&lt;/Identifiers&gt;
+&lt;FIPDetails name=&quot;string&quot; id=&quot;string&quot;&gt;
+&lt;FITypes&gt;
+&lt;FIType1 name=&quot;DEPOSIT&quot; value=&quot;string&quot;&gt;&lt;/FIType1&gt;
+&lt;FIType name=&quot;DEPOSIT&quot; value=&quot;string&quot;&gt;&lt;/FIType&gt;
+&lt;/FITypes&gt;
+&lt;/FIPDetails&gt;
+&lt;Meta type=&quot;PERSON&quot; value=&quot;string&quot;&gt;
+&lt;DeviceInfo&gt;
+&lt;Tag name=&quot;MOBILE&quot; value=&quot;string&quot;&gt;&lt;/Tag&gt;
+&lt;Tag1 name=&quot;GEOCODE&quot; value=&quot;string&quot;&gt;&lt;/Tag1&gt;
+&lt;Tag3 name=&quot;LOCATION&quot; value=&quot;string&quot;&gt;&lt;/Tag3&gt;
+&lt;Tag4 name=&quot;IP&quot; value=&quot;string&quot;&gt;&lt;/Tag4&gt;
+&lt;Tag5 name=&quot;TYPE&quot; value=&quot;string&quot;&gt;&lt;/Tag5&gt;
+&lt;Tag6 name=&quot;ID&quot; value=&quot;string&quot;&gt;&lt;/Tag6&gt;
+&lt;Tag7 name=&quot;OS&quot; value=&quot;string&quot;&gt;&lt;/Tag7&gt;
+&lt;Tag8 name=&quot;APP&quot; value=&quot;string&quot;&gt;&lt;/Tag8&gt;
+&lt;Tag9 name=&quot;CAPABILITY&quot; value=&quot;string&quot;&gt;&lt;/Tag9&gt;
+&lt;Tag10 name=&quot;TELECOM&quot; value=&quot;string&quot;&gt;&lt;/Tag10&gt;
+&lt;/DeviceInfo&gt;
+&lt;/Meta&gt;
+&lt;/AccDiscoveryRequest&gt;
+
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;AccDiscoveryResponse ver=&quot;1.0&quot; timestamp=&quot;2018-05-22T17:30:15.239+0000&quot; txnid=&quot;8399263c-4a15-11e8-bcd1-0277a9fbfedc&quot;&gt;
+    &lt;AuthenticatorType&gt;TOKEN&lt;/AuthenticatorType&gt;
+    &lt;DiscoveredAccounts&gt;
+        &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;RefSBI001&quot; maskedAccNumber=&quot;XXXXXXXXXXX1111&quot;/&gt;
+    &lt;/DiscoveredAccounts&gt;
+    &lt;DiscoveredAccounts&gt;
+        &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;CURRENT&quot; accRefNumber=&quot;RefSBI002&quot; maskedAccNumber=&quot;XXXXXXXX2222&quot;/&gt;
+    &lt;/DiscoveredAccounts&gt;
+&lt;/AccDiscoveryResponse&gt;
+</code></pre>
+
+<h3 id="account-linking">Account Linking</h3>
+<p>For simulation purpose, the customer account authentication is TOKEN based and an OTP is sent to the mobile no of the account holder. </p>
+<p>HTTP METHOD: <code>PUT</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/{AccountRefNo}</code></p>
+<p>Request Body</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;AccLinkRequest xmlns=&quot;https://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T17:51:18.412Z&quot; callbackURL=&quot;string&quot; txnid=&quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;&gt;
+&lt;AccDetails&gt;
+&lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;RefSBI001&quot; maskedAccNumber=&quot;SBI111111111111&quot;&gt;&lt;/Account&gt;
+&lt;FIPDetails id=&quot;string&quot; name=&quot;string&quot;&gt;&lt;/FIPDetails&gt;
+&lt;/AccDetails&gt;
+&lt;/AccLinkRequest&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;AccLinkResponse ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T14:05:39.592+0000&quot; txnid=&quot;f35761ac-4a18-11e8-96ff-0277a9fbfedc&quot;&gt;
+    &lt;Account FIType=&quot;DEPOSIT&quot; accType=&quot;SAVINGS&quot; accRefNumber=&quot;RefSBI001&quot; maskedAccNumber=&quot;XXXXXXXXXXX1111&quot;/&gt;
+&lt;/AccLinkResponse&gt;
+</code></pre>
+
+<h3 id="account-confirm-token">Account Confirm Token</h3>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Accounts/{AccountRefNo}/confirm-token</code></p>
+<p>Request Body</p>
+<p>Put the SMS received on mobile in <token>{OTP sms}</token></p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ConfirmLinkingRequest ver=&quot;1.0&quot;
+timestamp=&quot;2018-05-05T10:27:17.699Z&quot;
+txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;&gt;
+&lt;token&gt;774265&lt;/token&gt;
+&lt;/ConfirmLinkingRequest&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;ConfirmLinkingResponse ver=&quot;1.0&quot; timestamp=&quot;2018-05-05T10:27:17.699+0000&quot; txnid=&quot;410c2d2e-4a1e-11e8-960e-0277a9fbfedc&quot;/&gt;
+</code></pre>
+
+<h3 id="fi-request">FI request</h3>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/FI/request</code></p>
+<p>Request Body</p>
+<pre><code>&lt;FIRequest ver=&quot;1.0&quot; timestamp=&quot;2018-06-09T09:58:50.505Z&quot; txnid=&quot;c5a1450c-d08a-45b4-a475-0468bd10e380&quot;&gt;
+    &lt;ConsentID&gt;c4a1450c-d08a-45b4-a475-0468bd10e380&lt;/ConsentID&gt;
+        &lt;DataConsumer id=&quot;123456@finvu.in&quot; type=&quot;AA&quot; callbackURL=&quot;http://localhost:9090/AA/Test&quot;&gt;&lt;/DataConsumer&gt;
+    &lt;RequestFIParams&gt;
+        &lt;KeyMaterials&gt;
+            &lt;KeyMaterial startTime=&quot;2018-06-01T09:58:50.505Z&quot;&gt;
+                &lt;SessionID&gt;string&lt;/SessionID&gt;
+                &lt;DHPublicKey expiry=&quot;2019-06-01T09:58:50.505Z&quot;&gt;
+                    &lt;Parameters&gt;Param 1&lt;/Parameters&gt;
+                    &lt;KeyValue&gt;W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=&lt;/KeyValue&gt;
+                &lt;/DHPublicKey&gt;
+                &lt;Nonce&gt;12345&lt;/Nonce&gt;
+                &lt;Signature&gt; Signature Value
+                &lt;/Signature&gt;
+            &lt;/KeyMaterial&gt;
+        &lt;/KeyMaterials&gt;
+    &lt;/RequestFIParams&gt;
+&lt;/FIRequest&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;FIResponse ver=&quot;1.0&quot; timestamp=&quot;2018-07-08T10:40:53.307+0000&quot; txnid=&quot;c5a1450c-d08a-45b4-a475-0468bd10e380&quot; ConsentID=&quot;c4a1450c-d08a-45b4-a475-0468bd10e380&quot;&gt;
+    &lt;Sessions&gt;
+        &lt;SessionID&gt;6633fb91-35ca-47b8-8db0-e289d17f180a&lt;/SessionID&gt;
+    &lt;/Sessions&gt;
+&lt;/FIResponse&gt;
+
+</code></pre>
+
+<h3 id="fi-fetch">FI Fetch</h3>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/FI/fetch/{SessionID}</code></p>
+<p>Request Body</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;FetchFIRequest xmlns=&quot;http://https//standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-05-09T18:14:25.305Z&quot; txnid=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot;&gt;
+    &lt;ConsentID&gt;c4a1450c-d08a-45b4-a475-0468bd10e380&lt;/ConsentID&gt;
+&lt;/FetchFIRequest&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;FIFetchResponse timestamp=&quot;2018-07-07T14:17:20.949+0000&quot; txnID=&quot;af5b8023-aabc-4a46-8f37-d3c167129b1e&quot; ver=&quot;1.0&quot;&gt;
+    &lt;Account FIPId=&quot;fip@sbi.co.in&quot; id=&quot;SBI111111111111&quot; type=&quot;SAVINGS&quot;&gt;
+        &lt;FIs&gt;
+            &lt;FI&gt;
+                &lt;EncryptedFI&gt;SytTWUNmcDhXN1I3b00yWW9EeEFWMTlZYytIaE95dTgxWVdXUlVxNmEwd3RiVEhxRzFGcnc3Q0NL
+UmlXeVIxZlJoa0FoamJiYzA4cXFXQ01yWnRQWjZKYWt6RTVkTk8wbFdhWHFqR3NIejM3Y3hKdjJw
+MktsQXJ2eHVZajAvS0FIWlNJREtMQWM2R1ZzUWw4WTR3S3p5MWtOMHZvSlE5Si9OR0VabzBFQitO
+VlRsUUFqQjM1OC82RDJZSFd6QUg3cUNIZUVRSFRuVGk2WUVvVDQyTXp5dWdweCtsVFdpZ2VjeC93
+S3pkM2RJaUhqMng3cFpMK2c3N25sakwrc3oyOTM1TjN0dTRCa1pzWUhIZzcweHl1NEhwNjFNSW5p
+d0o3Qmd1aFVDSkxJMTRZQzhYbXZxODhaOVJLV1pjOVp0bTR6UEp5S016Q0NUbDJQQXJac3Q3VkNL
+VUUrWkl2bHgvMEZKY2RGR1NzSFhNemVwZ2x1dlVmUkVOTGxGWXFnOHV0QzZsNEFGaTlTMUlnTXBG
+VVFwcHpLc3hVT1g5bG1NK3ozaTllTEJxZmZVZ21RMW5WY1RsN05tWVFTaVE3UGpYWVVrbUFDZHlN
+Z1hHa3MyVTRUbXMyVlJPQ0g3T3c0RDFsemhVSHJLNExITkNkaS9WZTU2V1gzeXNSZkxIQWFhdmNs
+cytLMmlXKzN2VHNpNGRLamN2NkpKcTMrcW5tcy9QeWtESHlRVDdCK1ZpUnQyMGFQcDhPcFgzUWxF
+M05LZWs1&lt;/EncryptedFI&gt;
+                &lt;KeyMaterial startTime=&quot;2018-06-01T09:58:50.505+0000&quot;&gt;
+                    &lt;SessionID/&gt;
+                    &lt;DHPublicKey expiry=&quot;2019-06-01T09:58:50.505+0000&quot;&gt;
+                        &lt;Parameters&gt;Param 1&lt;/Parameters&gt;
+                        &lt;KeyValue&gt;W0C9Z43fLvtE1ab6itHiZy/5Cc4zvh8r80YQc0ezqAo=&lt;/KeyValue&gt;
+                    &lt;/DHPublicKey&gt;
+                    &lt;Nonce&gt;12345&lt;/Nonce&gt;
+                    &lt;Signature&gt; Signature Value
+                &lt;/Signature&gt;
+                &lt;/KeyMaterial&gt;
+            &lt;/FI&gt;
+        &lt;/FIs&gt;
+    &lt;/Account&gt;
+    &lt;Signature xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
+        &lt;SignedInfo&gt;
+            &lt;CanonicalizationMethod Algorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/&gt;
+            &lt;SignatureMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;/&gt;
+            &lt;Reference URI=&quot;&quot;&gt;
+                &lt;Transforms&gt;
+                    &lt;Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;/&gt;
+                &lt;/Transforms&gt;
+                &lt;DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/&gt;
+                &lt;DigestValue&gt;42WWu5X0m7UGpcTZdLmAuBVILDo=&lt;/DigestValue&gt;
+            &lt;/Reference&gt;
+        &lt;/SignedInfo&gt;
+        &lt;SignatureValue&gt;cAxxuZdaoRw5GMfyQfzjuLLqD8nRfGg7YP7ZvaR4Ad7XcNH8OqE/c7prR4/9KlfT15K0q/n8Sya3
+sSRHTxGpOtRpvRtLtEim5ocQ4DrOupOnS7T/QWnHWvrmQsMuitQPVvpeuA/q/dKBKlGhw1uI2hz0
+V/JVfJl06vpyZXaM7RZrGu8Arh/mD2G29hfYnvBRmhFfxgMPnQQBWitUgMRAkzV9J7d+QunfqQPj
+KWgBaAL+9TB1RP1kutv3BNNFcjP3HLTr0LdpAelEY8gdMwbH+9cwKzgULrpbJT0Hx5yeVjZ8sEpI
+/DTMY/n9AlEb61vM/MNEE+EfN4raWRDbIriNjw==&lt;/SignatureValue&gt;
+        &lt;KeyInfo&gt;
+            &lt;X509Data&gt;
+                &lt;X509SubjectName&gt;CN=PP,OU=CTPL,O=CTPL,L=Pune,ST=Maharashtra,C=IN&lt;/X509SubjectName&gt;
+                &lt;X509Certificate&gt;MIIDWTCCAkGgAwIBAgIEdZ+fzDANBgkqhkiG9w0BAQsFADBdMQswCQYDVQQGEwJJTjEUMBIGA1UE
+CBMLTWFoYXJhc2h0cmExDTALBgNVBAcTBFB1bmUxDTALBgNVBAoTBENUUEwxDTALBgNVBAsTBENU
+UEwxCzAJBgNVBAMTAlBQMB4XDTE4MDUzMDE3MTE0MloXDTE5MDUyNTE3MTE0MlowXTELMAkGA1UE
+BhMCSU4xFDASBgNVBAgTC01haGFyYXNodHJhMQ0wCwYDVQQHEwRQdW5lMQ0wCwYDVQQKEwRDVFBM
+MQ0wCwYDVQQLEwRDVFBMMQswCQYDVQQDEwJQUDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBALfG14O4AJKktnFbM5/vfJ7gcNjWRn0tiOSc05Ha8T7ZyiqP+og0vg/KqaJyh8gowCnYcmQ9
+gncRfLbu2B/KESMcLn6mdQawO2UeNwf4oLSH5F12BOaYLRdnDivAwjJmZ897kTgZ3MgDngKOqn4p
+vbNjHM1gXLHcxUhfJ+dCDgsM872qYUvwsCDselfdB7pGz69YImbjiYs5RuHk2bg16jfb6Ps5H18n
+UTu0qNkvnShBeNz98Z7dNP5phI2oCEuZdyZqB5wXdir4YrFGbk3wpIVLlLEYpIUMFLYtryK2c5xB
+HMP39W5r6mnsY/F4vuuwtmWgnPXQa1+4ZblEVhLDkhkCAwEAAaMhMB8wHQYDVR0OBBYEFPZNZ7B8
+XiTIhHEhNtDFj0b1LGj6MA0GCSqGSIb3DQEBCwUAA4IBAQBVDrNd9jwj3ylure8iGNvd6fzmc+or
+hU/9itFomim7X/TMAT6lYzpvJKyBLKN1l/mZQulkV+yRVdY5ETDnvKVHHfBE7OVSES8JYJXe/41L
+v0OQYTLEFcJwVSR+b6yOUgWBh2xdpkat358UwItQ5NIuVAU1EIbgfejHmMvJlUf/gWj1wD6+Hx9L
+UJn6SSo59xjPxbTEsh8PLMEipM2eI7cXG/uGMpyBg41YfvW2JQrXa4ILokQ1fbtc3iZZtfYZMVC0
+BaMXz5VPVRb8PrdxAt2szi93yS7HJ9UHYRbBmbRjbulFtrSXKd3GqvRfjht4174iKcBVkpNOpIQs
+syBiW1qx&lt;/X509Certificate&gt;
+            &lt;/X509Data&gt;
+        &lt;/KeyInfo&gt;
+    &lt;/Signature&gt;
+&lt;/FIFetchResponse&gt;
+</code></pre>
+
+<h3 id="notification">Notification</h3>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Notification</code></p>
+<p>Request Body</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Notification xmlns=&quot;http://standards.rebit.org.in/aa&quot; ver=&quot;1.0&quot; timestamp=&quot;2018-07-07T08:04:28.541Z&quot; txnid=&quot;eccdfcb0-a7aa-4168-9634-aba34ac5e086&quot;&gt;
+    &lt;From type=&quot;AA&quot; value=&quot;123456@finvu.in&quot; name=&quot;Finvu Account Aggregator&quot; id=&quot;123456@finvu.in&quot;&gt;
+    &lt;/From&gt;
+    &lt;To type=&quot;FIP&quot; value=&quot;12345@hdfc.co.in&quot; name=&quot;HDFC&quot; id=&quot;12345@hdfc.co.in&quot;&gt;
+    &lt;/To&gt;
+    &lt;Event type=&quot;CONSENT-REVOKED&quot;&gt;
+    &lt;/Event&gt;
+    &lt;Consent id=&quot;c4a1450c-d08a-45b4-a475-0468bd10e380&quot;&gt;
+    &lt;/Consent&gt;
+    &lt;Payload&gt;string&lt;/Payload&gt;
+&lt;/Notification&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>200 OK
+</code></pre>
+
+<h3 id="heartbeat">Heartbeat</h3>
+<p>HTTP METHOD: <code>POST</code></p>
+<p>URL: <code>http://api.finvu.in/ConnectHub/V1/Heartbeat</code></p>
+<p>Request Body</p>
+<pre><code>No Request Body expected
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>200 OK
+</code></pre>
                 
                   
                 
@@ -401,7 +732,7 @@ docs/
     
       <script src="../assets/javascripts/application.a59e2a89.js"></script>
       
-      <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
       
     
     

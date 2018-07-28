@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.2">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.2">
     
     
       
@@ -219,22 +219,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
+  <a href="#adding-user-account" title="Adding User Account" class="md-nav__link">
+    Adding User Account
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" title="Project layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-request" title="API Request" class="md-nav__link">
-    API Request
+  <a href="#adding-user-account-transaction" title="Adding User Account Transaction" class="md-nav__link">
+    Adding User Account Transaction
   </a>
   
 </li>
@@ -271,22 +264,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
+  <a href="#adding-user-account" title="Adding User Account" class="md-nav__link">
+    Adding User Account
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" title="Project layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-request" title="API Request" class="md-nav__link">
-    API Request
+  <a href="#adding-user-account-transaction" title="Adding User Account Transaction" class="md-nav__link">
+    Adding User Account Transaction
   </a>
   
 </li>
@@ -309,21 +295,88 @@
                 
                 
                 <h1 id="fip-data-api">FIP Data API</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<p>This API can be used to add sample data for accounts and associated transactions and can be called from an appropriate testing tool such as <a href="https://www.getpostman.com">Postman</a></p>
+<h2 id="adding-user-account">Adding User Account</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td align="center"><code>http://api.finvu.in/Accounts/add</code></td>
+</tr>
+<tr>
+<td>HTTP METHOD</td>
+<td align="center"><code>POST</code></td>
+</tr>
+</tbody>
+</table>
+<p>Request Body</p>
+<pre><code>&lt;UserAccountInfo&gt;
+    &lt;UserAccount accountRefNo=&quot;RefSBI001&quot; accountNo=&quot;SBI111111111111&quot; accountTypeEnum=&quot;SAVINGS&quot; FIType=&quot;DEPOSIT&quot;&gt;
+        &lt;Identifiers pan=&quot;AFF34964FFF&quot; mobile=&quot;9822289017&quot; email=&quot;backend@gmail.com&quot; aadhar=&quot;5555530495555&quot;&gt;&lt;/Identifiers&gt;  
+    &lt;/UserAccount&gt;
+    &lt;UserAccount accountRefNo=&quot;RefSBI002&quot; accountNo=&quot;SBI222222222222&quot; accountTypeEnum=&quot;CURRENT&quot; FIType=&quot;DEPOSIT&quot;&gt;
+        &lt;Identifiers pan=&quot;AFF34964FFF&quot; mobile=&quot;9822289017&quot; email=&quot;backend@gmail.com&quot; aadhar=&quot;5555530495555&quot;&gt;&lt;/Identifiers&gt;  
+    &lt;/UserAccount&gt;
+&lt;/UserAccountInfo&gt;
 </code></pre>
-<h2 id="api-request">API Request</h2>
+
+<p>Response Expected: </p>
+<pre><code>User account added.
+</code></pre>
+
+<h2 id="adding-user-account-transaction">Adding User Account Transaction</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td align="center"><code>http://api.finvu.in/Accounts/Transaction/add</code></td>
+</tr>
+<tr>
+<td>HTTP METHOD</td>
+<td align="center"><code>POST</code></td>
+</tr>
+</tbody>
+</table>
+<p>Request Body</p>
+<pre><code>&lt;UserAccountTrans&gt;
+        &lt;UserAccount&gt; 
+            &lt;accountRefNo&gt;RefSBI002&lt;/accountRefNo&gt; 
+            &lt;accountNo&gt;SBI222222222222&lt;/accountNo&gt; 
+            &lt;FIType&gt;DEPOSIT&lt;/FIType&gt;
+            &lt;accountTypeEnum&gt;CURRENT&lt;/accountTypeEnum&gt;
+            &lt;accountData&gt;
+            &lt;![CDATA[
+            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;Account xmlns=&quot;http://api.rebit.org.in/FISchema/deposit&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://api.rebit.org.in/FISchema/deposit ../FISchema/deposit.xsd&quot; id=&quot;accountNumber&quot; type=&quot;deposit&quot;&gt;
+                &lt;Summary type=&quot;current&quot; openingDate=&quot;2002-09-24&quot; ifscCode=&quot;AIRP0000001&quot; micrCode=&quot;&quot; branch=&quot;&quot; facility=&quot;OD&quot; currentBalance=&quot;&quot;    currentODLimit=&quot;&quot;&gt;
+                &lt;Holders type=&quot;single&quot;&gt;
+                    &lt;Holder order=&quot;1|2&quot; name=&quot;&quot; aadhaar=&quot;123456789012&quot; mobile=&quot;&quot; landline=&quot;&quot; address=&quot;&quot; email=&quot;qw.1234@co.in&quot; pan=&quot;AAAPL1234C&quot;/&gt;&lt;/Holders&gt;
+                &lt;/Summary&gt;
+                &lt;Transactions startDate=&quot;2002-09-24&quot; endDate=&quot;2002-09-24&quot;&gt;
+                    &lt;Transaction id=&quot;&quot; date=&quot;2002-09-24&quot; narration=&quot;&quot; reference=&quot;&quot; amount=&quot;800&quot; balance=&quot;90&quot;/&gt;
+            &lt;/Transactions&gt;
+            &lt;/Account&gt;
+            ]]&gt;
+            &lt;/accountData&gt;
+        &lt;/UserAccount&gt;
+&lt;/UserAccountTrans&gt;
+</code></pre>
+
+<p>Response Expected: </p>
+<pre><code>User account transaction added...
+</code></pre>
                 
                   
                 
@@ -387,7 +440,7 @@ docs/
     
       <script src="../assets/javascripts/application.a59e2a89.js"></script>
       
-      <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
       
     
     
